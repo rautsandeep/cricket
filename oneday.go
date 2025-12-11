@@ -1,8 +1,8 @@
-packge main
+package main
 
 import(
 "fmt"
-"github.com/sandeepraut/alpha/dog"
+"github.com/rautsandeep/alpha/dog"
 )
 
 func main(){

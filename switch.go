@@ -1,0 +1,48 @@
+package main
+
+import (
+"fmt"
+"math/rand"
+)
+
+func main(){
+
+var x int = rand.Intn(2)
+fmt.Printf("the value of x is %v\n",x)
+switch {
+case x == 0:
+	fmt.Println("false")
+default:
+	fmt.Println("true")
+}
+switch x {
+case 0:
+	fmt.Println("vaue  is zero")
+	fallthrough
+default:
+	fmt.Println("value is non-zero")
+	
+
+}
+ch1:= make(chan int)
+ch2:= make(chan int)
+ch3:= make(chan int)
+
+go func(){
+	ch3 <- 3
+}()
+
+go func(){
+	ch2 <- 2
+}()
+go func(){
+	ch1 <- 1
+}()
+value1:= <-ch1
+value2:= <-ch2
+value3:= <-ch3
+fmt.Println(value1)
+fmt.Println(value2)
+fmt.Println(value3)
+
+}
