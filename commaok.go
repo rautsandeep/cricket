@@ -22,7 +22,7 @@ func main() {
 		fmt.Println("The key surya does not exists")
 	}
 
-	run["surya"]= 2000
+	run["surya"] = 2000
 	t, ok := run["surya"]
 	if ok {
 		fmt.Println("The run scored by surya", t)
@@ -31,6 +31,4 @@ func main() {
 		fmt.Println("The key surya does not exists")
 	}
 
-
 }
-
